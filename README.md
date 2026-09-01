@@ -23,6 +23,8 @@ pone el sistema desde la base, nunca el modelo.
 
 ## Arquitectura
 
+![Arquitectura de ContentManager](docs/img/arquitectura.svg)
+
 ```
 Panel /admin (Jinja2 + HTMX + Tailwind, gráficos con Chart.js)
       │  cada request lleva account_id — aislamiento por cuenta

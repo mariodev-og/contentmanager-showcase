@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 668" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="860" height="668" fill="#ffffff"/>
+<text x="430.0" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#1a2233">ContentManager — generación de contenido</text>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#94a3b8"/></marker></defs>
+<rect x="30" y="70" width="800" height="52" rx="10" fill="#f1f5f9" stroke="#2f5496" stroke-width="1.5"/>
+<text x="430.0" y="92.0" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a2233">Panel /admin</text>
+<text x="430.0" y="111.0" text-anchor="middle" font-size="12.5" fill="#5b6472">Jinja2 + HTMX + Tailwind · aislamiento por account_id</text>
+<line x1="430.0" y1="122" x2="430.0" y2="156" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+<rect x="30" y="156" width="800" height="52" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="430.0" y="178.0" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a2233">Carga de propiedades</text>
+<text x="430.0" y="197.0" text-anchor="middle" font-size="12.5" fill="#5b6472">datos duros normalizados en la base</text>
+<line x1="430.0" y1="208" x2="430.0" y2="242" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+<rect x="30" y="242" width="800" height="52" rx="10" fill="#f1f5f9" stroke="#2f5496" stroke-width="1.5"/>
+<text x="430.0" y="264.0" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a2233">Cola de trabajos async</text>
+<text x="430.0" y="283.0" text-anchor="middle" font-size="12.5" fill="#5b6472">reparto justo entre cuentas (round-robin)</text>
+<line x1="430.0" y1="294" x2="430.0" y2="328" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+<rect x="30" y="328" width="800" height="52" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="430.0" y="359.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#1a2233">Copy con LLM (Claude / Gemini) + Ficha por template (Pillow)</text>
+<line x1="430.0" y1="380" x2="430.0" y2="414" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+<rect x="30" y="414" width="800" height="52" rx="10" fill="#f1f5f9" stroke="#2f5496" stroke-width="1.5"/>
+<text x="430.0" y="445.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#1a2233">Slides HTML/CSS con Chromium headless · Remotion para video</text>
+<line x1="430.0" y1="466" x2="430.0" y2="500" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+<rect x="30" y="500" width="800" height="52" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="430.0" y="522.0" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a2233">Aprobación humana registrada</text>
+<text x="430.0" y="541.0" text-anchor="middle" font-size="12.5" fill="#5b6472">nada publica ni gasta solo</text>
+<line x1="430.0" y1="552" x2="430.0" y2="586" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+<rect x="30" y="586" width="800" height="52" rx="10" fill="#f1f5f9" stroke="#2f5496" stroke-width="1.5"/>
+<text x="430.0" y="617.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#1a2233">Cronograma editorial → Publicación</text>
+</svg>
