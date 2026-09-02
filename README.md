@@ -27,6 +27,10 @@ pone el sistema desde la base, nunca el modelo.
 
 ![Arquitectura de ContentManager](docs/img/arquitectura.svg)
 
+**Panel — recreación con datos de ejemplo / panel recreation with example data:**
+
+![Panel](docs/img/panel.png)
+
 ```
 Panel /admin (Jinja2 + HTMX + Tailwind, gráficos con Chart.js)
       │  cada request lleva account_id — aislamiento por cuenta
