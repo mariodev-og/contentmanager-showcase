@@ -1,8 +1,16 @@
+# Español primero · English below
 # Origen: app/piece.py del sistema en produccion (fragmento: estados,
 # can_transition y la clase Piece; se recorto caption_de_publicacion).
 # Ilustra: cada pieza es una maquina de estados explicita. El paso a
 # 'agendado' exige confirmed_by y confirmed_at — nada se publica ni se
 # programa sin una aprobacion humana registrada en la base.
+#
+# --- English ---
+# Source: app/piece.py from the production system (fragment: statuses,
+# can_transition and the Piece class; caption_de_publicacion was trimmed).
+# Shows: every content piece is an explicit state machine. Moving to 'scheduled'
+# requires confirmed_by and confirmed_at — nothing publishes or schedules without
+# a human approval recorded in the database.
 
 """
 Pieza generada por ContentManager (carrusel, historia, post).

@@ -1,3 +1,4 @@
+# Español primero · English below
 # Origen: app/job_queue.py del sistema en produccion (fragmento: _claim_next_job).
 # Ilustra: la cola no reparte por orden de llegada sino por cuenta — ninguna
 # ocupa mas de MAX_POR_CUENTA workers a la vez, para que una inmobiliaria que
@@ -5,6 +6,15 @@
 # es un bug real de produccion: PostgREST traia los agregados deshabilitados y
 # la cola dejo de reclamar trabajos; la suite no lo vio porque el doble si los
 # implementaba. Se cuenta en Python, que aca es barato (running acotado por WORKERS).
+#
+# --- English ---
+# Source: app/job_queue.py from the production system (fragment: _claim_next_job).
+# Shows: the queue does not dispatch first-come-first-served but per account — none
+# takes more than MAX_POR_CUENTA workers at once, so an agency that enqueues 40
+# pieces can't starve the others. The count() comment is a real production bug:
+# PostgREST shipped aggregates disabled and the queue stopped claiming jobs; the
+# suite missed it because the test double did implement them. Counting in Python is
+# cheap here (running rows bounded by WORKERS).
 
 async def _claim_next_job() -> dict | None:
     """Toma el trabajo más viejo de una cuenta que todavía tenga hueco.

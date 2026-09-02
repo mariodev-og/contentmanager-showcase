@@ -1,8 +1,16 @@
+# Español primero · English below
 # Origen: app/properties/ficha_tecnica.py del sistema en produccion (fragmento).
 # Ilustra: los datos duros de la propiedad (precio, superficie, ambientes) se
 # dibujan por template con Pillow, tomados de la base. El LLM no los escribe
 # nunca — decision de diseno para que no alucine un precio o una zona en una
 # pieza que se publica a nombre de la inmobiliaria.
+#
+# --- English ---
+# Source: app/properties/ficha_tecnica.py from the production system (fragment).
+# Shows: the property's hard data (price, area, rooms) is drawn by template with
+# Pillow, taken from the database. The LLM never writes it — a design decision so
+# it can't hallucinate a price or a location on a piece published under the
+# agency's name.
 
 from __future__ import annotations
 

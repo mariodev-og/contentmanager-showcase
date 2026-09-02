@@ -1,9 +1,18 @@
+# Español primero · English below
 # Origen: app/llm.py del sistema en produccion (fragmento: TASK_TIERS, get_model
 # y _estimate_cost; se recortaron call_llm y el cliente Gemini).
 # Ilustra: cada tarea declara su tier (fast/smart) en un solo lugar, y cada
 # llamada estima su costo en dolares por tokens de entrada y salida. Es la base
 # del presupuesto tope y del kill-switch: el gasto se mide por operacion, no al
 # final del mes.
+#
+# --- English ---
+# Source: app/llm.py from the production system (fragment: TASK_TIERS, get_model
+# and _estimate_cost; call_llm and the Gemini client were trimmed).
+# Shows: each task declares its tier (fast/smart) in one place, and every call
+# estimates its cost in dollars from input and output tokens. It's the basis of
+# the budget cap and the kill-switch: spend is measured per operation, not at
+# month's end.
 
 TASK_TIERS: dict[str, str] = {
     # fast: output corto, estructura predecible, latencia importa
