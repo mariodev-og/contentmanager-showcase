@@ -1,3 +1,5 @@
+**🇦🇷 Español · 🇬🇧 [English](#-english)**
+
 # Arquitectura
 
 ## Flujo de datos
@@ -38,3 +40,38 @@ aislamiento en `tests/`.
 Cada llamada al LLM estima su costo por tokens de entrada y salida (ver
 `snippets/routing_de_modelo.py`). Sobre esa medición se apoyan el presupuesto
 tope por cuenta y el corte de gasto.
+
+---
+
+<a name="english"></a>
+# 🇬🇧 English — Architecture
+
+## Data flow
+
+1. The agency enters the `/admin` panel. Every request carries its `account_id`;
+   per-account isolation is checked in each handler.
+2. It loads a listing (price, area, rooms, location, photos). Hard data is stored
+   normalized in the database.
+3. It requests a piece. The job does NOT run in the request: it's enqueued. The
+   queue dispatches per account (round-robin), not first-come-first-served, so
+   one agency can't monopolize the workers.
+4. The worker takes the job: the LLM (Claude or Gemini, per task) writes the
+   copy; the spec sheet is drawn by template with Pillow from the database's hard
+   data — the model doesn't touch it; carousel slides are rendered as HTML/CSS
+   with headless Chromium, with a Pillow fallback.
+5. The piece is left in 'pending approval'. Nothing publishes or spends extra
+   tokens without a human confirming it (recorded).
+6. Approved, it enters that account's editorial calendar.
+
+## Multi-tenancy
+
+`account_id` runs through the whole system: it selects configuration, isolates
+data and routes the queue. Validating that one account can't see another's
+listings or pieces is a first-order concern — hence the isolation suite in
+`tests/`.
+
+## Cost control
+
+Every LLM call estimates its cost from input and output tokens (see
+`snippets/routing_de_modelo.py`). The per-account budget cap and the spend cutoff
+rest on that measurement.
